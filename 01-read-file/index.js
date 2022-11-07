@@ -1,15 +1,16 @@
 
-const fs = require('fs')
+const fs = require('fs');
 const path = require('path');
 
-const text = path.join(__dirname, 'text.txt')
-const stream = fs.createReadStream(text,'utf-8');
+const text = path.join(__dirname, 'text.txt');
+const stream = fs.createReadStream(text);
 
 
-stream.on('data', 
-function(str){
-    console.log(String(str));
-});
+stream.on('data',
+    function (str) {
+        console.log(String(str));
+    }
+);
 
 
 
